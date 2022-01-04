@@ -1,0 +1,16 @@
+{
+  "name": "customDiceParser",
+  "version": "1.0.0",
+  "description": "Rolling dice parser",
+  "main": "index.js",
+  "type":"module",
+  "author": "KFégar",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.5.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  }
+}
