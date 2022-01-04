@@ -26,7 +26,7 @@ export default {
         if(input.trim().split(new RegExp('[dD]')).length === 0) return dices;
         if(input.trim().split(new RegExp('[dD]'))[0].length === 0) {
             dices.count = 1;
-        } else {
+        } else if(!isNaN(parseInt(input.trim().split(new RegExp('[dD]'))[0]))) {
             dices.count = parseInt(input.trim().split(new RegExp('[dD]'))[0]);
         }
         return dices;
@@ -37,7 +37,9 @@ export default {
             messageInput : input,
             count : 0,
         }
-        if(input.trim().split(new RegExp('[dD]')).length > 0 && input.trim().split(new RegExp('[dD]'))[1].length > 0){
+        if(input.trim().split(new RegExp('[dD]')).length > 0
+            && input.trim().split(new RegExp('[dD]'))[1].length > 0
+            && !isNaN(parseInt(input.trim().split(new RegExp('[dD]'))[1]))) {
             faces.count = parseInt(input.trim().split(new RegExp('[dD]'))[1]);
         }
         return faces;
